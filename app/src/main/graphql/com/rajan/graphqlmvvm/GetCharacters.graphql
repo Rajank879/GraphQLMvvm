@@ -1,0 +1,13 @@
+query GetCharacters($page: Int){
+  characters(page: $page) {
+  info {
+    count,next,pages
+  }
+  results {
+    id,name,image,
+    episode {
+      id,name
+    }
+  }
+  }
+}
